@@ -1,7 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_crypto_wallet/ui/authentication.dart';
 
-void main() {
+import 'authentication.dart';
+
+void main() async {
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -14,5 +17,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

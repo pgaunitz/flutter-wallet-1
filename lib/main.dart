@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'ui/authentication.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
 }

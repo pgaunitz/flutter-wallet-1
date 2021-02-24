@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_crypto_wallet/net/flutterfire.dart';
 
 class Authentication extends StatefulWidget {
   Authentication({Key key}) : super(key: key);
@@ -21,11 +22,12 @@ class _AuthenticationState extends State<Authentication> {
           color: Colors.teal,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextFormField(
               controller: _emailField,
               decoration: InputDecoration(
-                hintText: "name@email.com",
+                hintText: "name@mail.com",
                 hintStyle: TextStyle(
                   color: Colors.white,
                 ),
@@ -39,7 +41,7 @@ class _AuthenticationState extends State<Authentication> {
               controller: _passwordfield,
               obscureText: true,
               decoration: InputDecoration(
-                hintText: "Password",
+                hintText: "password",
                 hintStyle: TextStyle(
                   color: Colors.white,
                 ),
@@ -57,7 +59,13 @@ class _AuthenticationState extends State<Authentication> {
                 color: Colors.white,
               ),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () async {
+                  bool shouldNavigate =
+                      await register(_emailField.text, _passwordfield.text);
+                  if (shouldNavigate) {
+                    //Navigate
+                  }
+                },
                 child: Text("Register"),
               ),
             ),
@@ -69,7 +77,13 @@ class _AuthenticationState extends State<Authentication> {
                 color: Colors.white,
               ),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () async {
+                  bool shouldNavigate =
+                      await signIn (_emailField.text, _passwordfield.text);
+                  if (shouldNavigate) {
+                    //Navigate
+                  }
+                },
                 child: Text("Login"),
               ),
             ),

@@ -79,7 +79,7 @@ class _AuthenticationState extends State<Authentication> {
               child: MaterialButton(
                 onPressed: () async {
                   bool shouldNavigate =
-                      await signIn (_emailField.text, _passwordfield.text);
+                      await signIn(_emailField.text, _passwordfield.text);
                   if (shouldNavigate) {
                     //Navigate
                   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_crypto_wallet/net/flutterfire.dart';
-import 'package:flutter_crypto_wallet/ui/home_view.dart';
+
+import 'home_view.dart';
 
 class Authentication extends StatefulWidget {
   Authentication({Key key}) : super(key: key);
@@ -26,6 +27,7 @@ class _AuthenticationState extends State<Authentication> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextFormField(
+              style: TextStyle(color: Colors.white),
               controller: _emailField,
               decoration: InputDecoration(
                 hintText: "name@mail.com",
@@ -39,6 +41,7 @@ class _AuthenticationState extends State<Authentication> {
               ),
             ),
             TextFormField(
+              style: TextStyle(color: Colors.white),
               controller: _passwordfield,
               obscureText: true,
               decoration: InputDecoration(

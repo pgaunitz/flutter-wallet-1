@@ -24,7 +24,7 @@ class _AuthenticationState extends State<Authentication> {
           color: Colors.teal,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: MediaQuery.of(context).size.width / 1.3,
@@ -86,6 +86,7 @@ class _AuthenticationState extends State<Authentication> {
                 child: Text("Register"),
               ),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height / 35),
             Container(
               width: MediaQuery.of(context).size.width / 1.4,
               height: 45,
